@@ -11,6 +11,8 @@ javafx的通讯录练习1.3
 
 ##界面展示
 > homeStage  
+
 ![1.png](https://upload-images.jianshu.io/upload_images/6035077-1e5a2f154b0ae18c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 > secondStage  
+
 ![2.png](https://upload-images.jianshu.io/upload_images/6035077-8aa94a9e462e34ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
