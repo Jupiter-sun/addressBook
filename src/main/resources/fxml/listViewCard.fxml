@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="cardPane" prefHeight="150" prefWidth="415" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.redhood.www.addressbook.controller.CardController">
+    <left>
+        <AnchorPane prefHeight="140" prefWidth="140">
+            <children>
+                <StackPane AnchorPane.leftAnchor="10" AnchorPane.topAnchor="15">
+                    <!--<prefWidth>30</prefWidth>
+                    <prefHeight>30</prefHeight>
+                    <padding>
+                        <Insets topRightBottomLeft="5"/>
+                    </padding>
+                    阴影效果-->
+                    <effect>
+                        <DropShadow>
+                            <radius>5</radius>
+                            <offsetY>2.0</offsetY>
+                        </DropShadow>
+                    </effect>
+                    <children>
+
+                        <ImageView fx:id="photo" fitHeight="120" fitWidth="120" layoutX="3.0" layoutY="8.0">
+                            <clip>
+                                <Circle fx:id="circle" centerX="60" centerY="60" fill="aqua">
+                                    <radius>60</radius>
+                                </Circle>
+                            </clip>
+                        </ImageView>
+                    </children>
+                </StackPane>
+
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane>
+            <children>
+
+                <Label fx:id="name" alignment="CENTER" layoutX="80.0" layoutY="23.0" text="11111" textAlignment="CENTER"
+                       AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="23.0">
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Label>
+
+                <Label fx:id="sex" alignment="CENTER" layoutX="8.0" layoutY="62.0" prefHeight="20.0" prefWidth="214.0"
+                       text="2222" textAlignment="CENTER" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="62.0"/>
+                <Label fx:id="phoneNum" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="90.0"
+                       prefHeight="20.0" prefWidth="211.0" text="33333" textAlignment="CENTER"
+                       AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0"/>
+                <Label fx:id="address" alignment="CENTER" layoutX="10.0" layoutY="116.0" prefHeight="20.0"
+                       prefWidth="210.0" text="44444" textAlignment="CENTER" AnchorPane.leftAnchor="10.0"
+                       AnchorPane.topAnchor="116.0"/>
+
+            </children>
+
+        </AnchorPane>
+    </center>
+
+    <right>
+        <AnchorPane>
+            <children>
+                <ImageView fx:id="phoneIcon" fitHeight="40" fitWidth="40" AnchorPane.rightAnchor="10"
+                           AnchorPane.topAnchor="60"></ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+
+
+</BorderPane>

@@ -1,0 +1,29 @@
+.root{
+
+
+}
+/**-fx-effect: dropshadow(three-pass-box, #5e5e5e, 10.0,0, 0, 0);
+    -fx-cursor: hand;**/
+.combo-box{
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+#cardPane{
+
+}
+
+#title{
+    -fx-text-fill:rgb(255, 255, 255);
+    -fx-font-size: 25;
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-weight: bold;
+}
+
+#topAnchorPane{
+    -fx-background-color: linear-gradient(to right, rgb(72, 68, 73), rgb(39, 41, 45), rgb(72, 68, 73));
+}
+
+
+#searchText{
+}
+

@@ -8,48 +8,50 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<StackPane prefHeight="930" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="top.redhood.www.addressbook.controller.HomeController">
 
-        <BorderPane fx:id="homePage">
-            <top>
-                <AnchorPane>
-                    <children>
-                        <Label layoutX="189.0" layoutY="5.0" text="通讯录" AnchorPane.leftAnchor="189.0"
-                               AnchorPane.topAnchor="5.0">
-                            <font>
-                                <Font size="25.0"/>
-                            </font>
-                        </Label>
-
-                        <TextField fx:id="searchText" layoutX="18.0" layoutY="38.0" prefHeight="37.0" prefWidth="408.0"
-                                   AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="38.0">请输入想要查找的信息
-                        </TextField>
-                        <Button fx:id="serachButton" layoutX="351.0" layoutY="38.0" mnemonicParsing="false" prefHeight="37.0"
-                                prefWidth="75.0" text="搜索"/>
-
-                        <HBox AnchorPane.topAnchor="90" AnchorPane.bottomAnchor="5" alignment="BASELINE_CENTER" spacing="80">
-                            <children>
-                                <Button text="首页" fx:id="homeButton"/>
-                                <ComboBox promptText="性别" fx:id="sexComboBox"/>
-                                <ComboBox promptText="宿舍" fx:id="doorComboBox"/>
-                            </children>
-                        </HBox>
-
-                    </children>
-                </AnchorPane>
-            </top>
-
-            <center>
-                <ListView fx:id="msgList">
+<StackPane prefHeight="930" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.redhood.www.addressbook.controller.HomeController">
+   <children>
+   
+           <BorderPane fx:id="homePage">
+               <top>
+                   <AnchorPane fx:id="topAnchorPane">
+                       <children>
+                           <Label fx:id="title" layoutX="189.0" layoutY="5.0" text="通讯录" visible="false" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="5.0">
+                               <font>
+                                   <Font size="25.0" />
+                               </font>
+                           </Label>
+   
+                           <TextField fx:id="searchText" layoutY="19.0" prefHeight="49.0"
+                                      prefWidth="454.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.topAnchor="19.0" styleClass="form-control"
+                                      text="请输入想要查找的信息"  onMouseClicked="#clearText">
+                            </TextField>
+                           <Button fx:id="serachButton" layoutX="357.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="97.0" text="搜索" onMouseClicked="#searchByKey"/>
+   
+                           <HBox alignment="BASELINE_CENTER" spacing="80" AnchorPane.bottomAnchor="5" AnchorPane.topAnchor="90">
+                               <children>
+                                   <Button fx:id="homeButton" text="首页"  styleClass="btn,btn-default" onMouseClicked="#backStar"/>
+                                   <ComboBox fx:id="sexComboBox" promptText="性别"  styleClass="btn,btn-default,dropdown-toggle" onAction="#sortBySex"></ComboBox>
+                                   <ComboBox fx:id="doorComboBox" promptText="宿舍" styleClass="btn,btn-default,dropdown-toggle" onAction="#sortBydormitory"/>
+                               </children>
+                           </HBox>
+   
+                       </children>
+                   </AnchorPane>
+               </top>
+   
+               <center>
+                   <ListView fx:id="msgList">
 
                 </ListView>
-            </center>
-        </BorderPane>
-
-    <BorderPane fx:id="ex_page" visible="false">
+               </center>
+           </BorderPane>
+   
+       <BorderPane fx:id="ex_page" visible="false">
 
     </BorderPane>
+   </children>
 
 
 </StackPane>
