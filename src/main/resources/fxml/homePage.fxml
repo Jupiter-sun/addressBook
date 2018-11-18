@@ -8,11 +8,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <StackPane prefHeight="930" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.redhood.www.addressbook.controller.HomeController">
    <children>
    
            <BorderPane fx:id="homePage">
+
                <top>
                    <AnchorPane fx:id="topAnchorPane">
                        <children>
@@ -22,18 +24,21 @@
                                </font>
                            </Label>
    
-                           <TextField fx:id="searchText" layoutY="19.0" prefHeight="49.0"
-                                      prefWidth="454.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.topAnchor="19.0" styleClass="form-control"
-                                      text="请输入想要查找的信息"  onMouseClicked="#clearText">
+                           <TextField fx:id="searchText" layoutY="19.0" onMouseClicked="#clearText" prefHeight="49.0" prefWidth="454.0" styleClass="form-control" text="请输入想要查找的信息" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="19.0">
                             </TextField>
-                           <Button fx:id="serachButton" layoutX="357.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="97.0" text="搜索" onMouseClicked="#searchByKey"/>
-   
-                           <HBox alignment="BASELINE_CENTER" spacing="80" AnchorPane.bottomAnchor="5" AnchorPane.topAnchor="90">
+
+                           <StackPane layoutX="357.0" layoutY="19.0">
+                               <Button fx:id="serachButton"  mnemonicParsing="false" onMouseClicked="#searchByKey" prefHeight="50.0" prefWidth="97.0" text="" />
+                               <ImageView >
+                                   <Image url="/img/searchIcon2.png"/>
+                               </ImageView>
+                           </StackPane>
+
+                           <HBox alignment="BASELINE_CENTER" spacing="60" AnchorPane.bottomAnchor="5" AnchorPane.topAnchor="90">
                                <children>
-                                   <Button fx:id="homeButton" text="首页"  styleClass="btn,btn-default" onMouseClicked="#backStar"/>
-                                   <ComboBox fx:id="sexComboBox" promptText="性别"  styleClass="btn,btn-default,dropdown-toggle" onAction="#sortBySex"></ComboBox>
-                                   <ComboBox fx:id="doorComboBox" promptText="宿舍" styleClass="btn,btn-default,dropdown-toggle" onAction="#sortBydormitory"/>
+                                   <Button fx:id="homeButton" onMouseClicked="#backStar" prefHeight="32.0" prefWidth="83.0" styleClass="btn,btn-default" text="首页"/>
+                                   <ComboBox fx:id="sexComboBox" onAction="#sortBySex" promptText="性别" styleClass="btn,btn-default,dropdown-toggle" />
+                                   <ComboBox fx:id="doorComboBox" onAction="#sortBydormitory" promptText="宿舍" styleClass="btn,btn-default,dropdown-toggle" />
                                </children>
                            </HBox>
    

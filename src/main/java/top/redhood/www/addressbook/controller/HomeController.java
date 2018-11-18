@@ -9,8 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import top.redhood.www.addressbook.bean.StudentMsg;
 import top.redhood.www.addressbook.data.STUDENT_DATA;
@@ -34,7 +32,6 @@ public class HomeController extends RootController implements Initializable {
     public Button serachButton;
     public ListView msgList;
 
-    private AppModel appModel = new AppModel();
 
 
     @Override
@@ -72,10 +69,8 @@ public class HomeController extends RootController implements Initializable {
                 e.printStackTrace();
             }
         }
-
         ObservableList<Parent> list2 = FXCollections.observableArrayList(parentList);
         msgList.setItems(list2);
-
     }
 
     //查询事件（通过keyword）
@@ -106,14 +101,18 @@ public class HomeController extends RootController implements Initializable {
         clearstudentList();
         changelist(arrayListByDoor);
     }
- //返回首页
+
+    //返回首页
     public void backStar() {
         clearstudentList();
         doorComboBox.setValue("宿舍号");
         sexComboBox.setValue("性别");
+        clearText();
         changelist(STUDENT_DATA.StudentMsgarray);
 
     }
+
+    //listView监听
 
 
 }

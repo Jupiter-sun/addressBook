@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.effect.DropShadow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="top.redhood.www.addressbook.controller.MsgPageController"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane prefHeight="940" prefWidth="440" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.redhood.www.addressbook.controller.MsgPageController">
 
-</AnchorPane>
+    <top>
+        <AnchorPane>
+            <children>
+                <StackPane AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="34.0">
+                    <effect>
+                        <DropShadow>
+                            <radius>5</radius>
+                            <offsetY>2.0</offsetY>
+                        </DropShadow>
+                    </effect>
+                   <children>
+   
+                       <Circle fx:id="round2" centerX="150" centerY="150" fill="#8b8d91">
+                           <radius>147</radius>
+                       </Circle>
+   
+                       <ImageView fx:id="Photo4msgPage" fitHeight="300" fitWidth="300" layoutX="80" layoutY="34.0">
+                           <clip>
+                               <Circle fx:id="clipPhoto" centerX="150" centerY="150" fill="#f2fcff">
+                                   <radius>140</radius>
+                               </Circle>
+                           </clip>
+                       </ImageView>
+                   </children>
+
+                </StackPane>
+            </children>
+        </AnchorPane>
+    </top>
+
+    <center>
+        <AnchorPane>
+            <children>
+                <Label fx:id="name4Msg" layoutX="160.0" layoutY="30.0" text="name">
+               <font>
+                  <Font size="45.0" />
+               </font></Label>
+                <Label fx:id="sex4Msg" alignment="CENTER" layoutX="190.0" layoutY="141.0" text="1" textAlignment="CENTER" />
+                <Label fx:id="phone4Msg" alignment="CENTER" layoutX="170.0" layoutY="229.0" text="2" textAlignment="CENTER"/>
+                <Label fx:id="address4Msg" alignment="CENTER" layoutX="180.0" layoutY="327.0" text="3" textAlignment="CENTER"/>
+                <Label fx:id="class4Msg" alignment="CENTER" layoutX="180.0" layoutY="424.0" text="4" textAlignment="CENTER"/>
+                <Label fx:id="doorNum" alignment="CENTER" layoutX="185.0" layoutY="528.0" text="5" textAlignment="CENTER"/>
+            </children>
+        </AnchorPane>
+    </center>
+
+
+</BorderPane>

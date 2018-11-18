@@ -82,6 +82,17 @@ public class AppModel {
         return arraySearch;
     }
 
+    //通过phoneNum查询
+    public StudentMsg searchByName(ArrayList<StudentMsg> array,String name){
+
+        for (StudentMsg studentmsg : array){
+            if(name.equals(studentmsg.getName())){
+                return studentmsg;
+            }
+        }
+        return null;
+    }
+
 
 
 
